@@ -1,0 +1,36 @@
+{
+  "name": "@mojotech/mojo-ghost-s3-adapter",
+  "version": "0.9.0",
+  "description": "Ghost storage adapter to store and serve images from AWS S3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitub.com/mojotech/mojo-ghost-s3-adapter.git"
+  },
+  "homepage": "https://github.com/mojotech/mojo-ghost-s3-adapter",
+  "bugs": {
+    "url": "https://github.com/mojotech/mojo-ghost-s3-adapter/issues"
+  },
+  "keywords": [
+    "ghost",
+    "s3",
+    "upload",
+    "blog",
+    "aws",
+    "amazon",
+    "storage"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "author": "Craig P Jolicoeur <craig@mojotech.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1.6",
+    "bluebird": "^2.10.2",
+    "ghost-storage-base": "0.0.1"
+  }
+}
