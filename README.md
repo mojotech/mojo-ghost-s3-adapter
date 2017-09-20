@@ -48,7 +48,7 @@ If you use a CDN such as CloudFront or CloudFlare you can add an optional
 of your CDN.
 
 ```javascript
-  assetHost: 'https://cdn.yourdomain.com/'
+  assetHost: 'https://cdn.yourdomain.com'
 ```
 
 ## Contributing

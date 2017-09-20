@@ -1,6 +1,6 @@
 {
   "name": "@mojotech/mojo-ghost-s3-adapter",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Ghost storage adapter to store and serve images from AWS S3",
   "main": "index.js",
   "scripts": {
