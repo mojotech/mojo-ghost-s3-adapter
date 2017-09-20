@@ -1,6 +1,3 @@
-/**
- * Created by MojoTech on 9/17/2017.
- */
 'use strict';
 
 const fs = require('fs');
@@ -31,6 +28,7 @@ class MojoGhostS3Adapter extends BaseAdapter {
         }
 
         this.config = config;
+        this.assetHost = config.asssetHost ? config.assetHost : util.format('https://s3.%s.amazonaws.com/%s', config.region, config.bucket);
         this.imageCacheMaxAge = 1000 * 365 * 24 * 60 * 60; // 365 days
         this._s3Client = s3Client ? s3Client : new S3({
             accessKeyId: config.accessKeyId,
@@ -52,6 +50,7 @@ class MojoGhostS3Adapter extends BaseAdapter {
         const config = this.config;
         const s3 = this._s3Client;
         const cacheMaxAge = this.imageCacheMaxAge;
+        const assetHost = this.assetHost;
         const curDate = new Date();
 
         return new Promise(function(resolve, reject) {
@@ -76,7 +75,8 @@ class MojoGhostS3Adapter extends BaseAdapter {
                     return reject(error);
                 }
 
-                return resolve(util.format('https://s3.%s.amazonaws.com/%s/%s', config.region, config.bucket, targetKey));
+                // return resolve(util.format('https://s3.%s.amazonaws.com/%s/%s', config.region, config.bucket, targetKey));
+                return resolve(util.format('%s/%s', assetHost, targetKey));
             });
         });
     }

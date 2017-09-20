@@ -32,5 +32,8 @@
     "aws-sdk": "^2.1.6",
     "bluebird": "^2.10.2",
     "ghost-storage-base": "0.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.7.0"
   }
 }
