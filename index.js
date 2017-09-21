@@ -28,7 +28,7 @@ class MojoGhostS3Adapter extends BaseAdapter {
     }
 
     this.config = config;
-    this.assetHost = config.asssetHost
+    this.assetHost = config.assetHost
       ? config.assetHost
       : util.format('https://s3.%s.amazonaws.com/%s', config.region, config.bucket);
     this.imageCacheMaxAge = 1000 * 365 * 24 * 60 * 60; // 365 days
